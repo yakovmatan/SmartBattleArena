@@ -1,8 +1,10 @@
-﻿public class BattleRobot : IPowerable , IAttackable, IMovable
+﻿using System;
+
+public class BattleRobot : IPowerable , IAttackable, IMovable
 {
     public bool IsOn { get; set; } = false;
 
-    public int Health { get; set; }
+    public int Health { get; set; } = 100;
 
     
     public void TurnOn()
@@ -23,6 +25,11 @@
     public void Heal(int amount)
     {
         Health += amount;
+    }
+
+    public void MoveTo(string location)
+    {
+        Console.WriteLine(location);
     }
 
 

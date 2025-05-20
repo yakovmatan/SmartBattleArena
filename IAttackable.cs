@@ -2,7 +2,7 @@
 {
     int Health { get; set; }
 
-    void TakeDamage(int amount);
+    void TakeDamege(int amount);
 
     void Heal(int amount);
 }

@@ -2,6 +2,8 @@
 {
     public bool IsOn { get; set; } = false;
 
+    public int Health { get; set; }
+
     
     public void TurnOn()
     {
@@ -11,6 +13,16 @@
     public void TurnOff()
     {
         IsOn = false;
+    }
+
+    public void TakeDamege(int amount)
+    {
+        Health -= amount;
+    }
+
+    public void Heal(int amount)
+    {
+        Health += amount;
     }
 
 
